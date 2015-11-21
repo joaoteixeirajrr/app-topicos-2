@@ -11,6 +11,11 @@ use Illuminate\Support\Facades\Session;
 
 class ContatoController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         $contatos = Contato::all();

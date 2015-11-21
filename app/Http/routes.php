@@ -17,3 +17,8 @@ Route::get('/', function () {
 
 
 Route::resource('contato', 'ContatoController');
+
+Route::controllers([
+    'auth'     => 'Auth\AuthController',
+    'password' => 'Auth\PasswordController',
+]);
